@@ -1,0 +1,7 @@
+2) By analyzing the graph, we can conclude that for a minimal leaf capacity of 1, the training capacity is 100%, which indicates overfitting,
+an overly complicated tree, but with a reduced test accuracy (around 77%), meaning that the tree is memorizing data. For bigger minimal leaf
+capacities, both the training accuracy lowers and the testing accuracy increases, evidence of a more generalized tree. The best performance
+is with a minimal leaf capacity of 25, where the testing accuracy hits its peak (around 86%).
+
+For values >25, we encounter a case of underfitting, both accuracies plummeting, because the tree is excessively generalized, nodes are
+very restrictive and do not allow for necessary splitting

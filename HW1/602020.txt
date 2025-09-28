@@ -1,0 +1,13 @@
+What identifies heart disease:
+With chest_pain <= 3.5 AND old_peak <= 0.5: 1 heart_disease -> 98.8% NORMAL
+
+With chest_pain <= 3.5 AND old_peak > 0.5: 6 heart_disease -> 66.7% NORMAL
+
+With chest_pain > 3.5: 10 normal -> 85.51% HEART DISEASE
+
+With chest_pain > 3.5 AND old_peak <= 0.75: 8 heart_disease -> 65.22% NORMAL    
+
+With chest_pain > 3.5 AND old_peak > 0.75: 36 heart_disease -> 100% HEART DISEASE
+
+The principal factors that indicate a higher risk of heart disease for hungarian citizens are an elevated chest pain, being male,
+higher ST deviation as a result of physical exercise, especially if there is discrepancies in a resting electrocardiographic test.
