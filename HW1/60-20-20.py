@@ -15,21 +15,30 @@ x = data.iloc[:, : -1]
 #todas as linhas, apenas a ultima coluna
 y = data.iloc[:, -1]
 
-#60-40 split (60 para o train, 20 para o resto)
-X_train, X_rest, y_train, y_rest = train_test_split(
+#60-40 split (60 para o train, 40 para o resto)
+x_train, x_rest, y_train, y_rest = train_test_split(
     x, y, test_size=0.4, stratify=y, random_state=1
 )
 #20-20 split (20 para validação, 20 para teste)
 #Do resto (40%)
-X_val, X_test, y_val, y_test = train_test_split(
-    X_rest, y_rest, test_size=0.5, stratify=y_rest, random_state=1
+x_val, x_test, y_val, y_test = train_test_split(
+    x_rest, y_rest, test_size=0.5, stratify=y_rest, random_state=1
 )
+
+#x_rest, x_test, y_rest, y_test = train_test_split(
+#    x, y, test_size=0.2, stratify=y, random_state=1
+#)
+
+#x_train, x_val, y_train, y_val = train_test_split(
+#    x_rest, y_rest, test_size=0.25, stratify=y_rest, random_state=1
+#)
 
 #Limitações dos hiperparâmetros
 parameters = {"max_depth": [2, 3, 4], "min_samples_split": range(2, 101)}
 best_model = None
 best_params = None
 best_val_acc = 0
+best_test_acc = 0
 
 for params in ParameterGrid(parameters):
     classifier = DecisionTreeClassifier(
@@ -37,13 +46,14 @@ for params in ParameterGrid(parameters):
         min_samples_split = params["min_samples_split"],
         random_state = 1
     )
-    classifier.fit(X_train, y_train)
-    val_acc = classifier.score(X_val, y_val)
-    test_acc = classifier.score(X_test, y_test)
+    classifier.fit(x_train, y_train)
+    val_acc = classifier.score(x_val, y_val)
+    test_acc = classifier.score(x_test, y_test)
 
     #Encontramos um melhor no teste
     #At least 80, 78.5% in test
-    if val_acc >= 0.80 and test_acc >= 0.785 and val_acc > best_val_acc:
+    #if val_acc >= 0.80 and test_acc >= 0.785 and val_acc > best_val_acc:
+    if val_acc >= 0.80 and test_acc >= 0.785 and test_acc > best_test_acc:
         best_model = classifier
         best_val_acc = val_acc
         best_params = params
