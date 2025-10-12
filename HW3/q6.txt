@@ -1,0 +1,13 @@
+While linear regression only captures linear relationships between the features in a dataset,
+a multilayer perceptron (MLP) with ReLU activation can model non-linear relationships.
+This enables the MLP to identify more complex patterns in the data, potentially improving
+pattern recognition and predictive performance.
+
+From the graph, it is evident that there is no difference between the linear regression
+model and the MLP without activation, highlighting the importance of incorporating a
+non-linear activation function. In contrast, the MLP with ReLU demonstrates lower values across
+the maximum, minimum, and overall range of MAE (Median Absolute Error) compared to linear
+regression. Additionally, the boxplot and median also indicate reduced MAE values.
+
+Overall, these results suggest that the MLP with ReLU achieves better accuracy than linear regression,
+as reflected by the consistently lower MAE.

@@ -1,0 +1,4 @@
+As observed in the graph, as the number of iterations increases, the loss (MAE) for both the
+training and validation sets steadily decreases, eventually converging to approximately
+1000 MAE. This indicates that the MLP with ReLU activation demonstrates good overall generalization,
+effectively learning patterns from the training data while maintaining performance on unseen data.
