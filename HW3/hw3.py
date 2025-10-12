@@ -19,7 +19,6 @@ x = data.drop(columns=["price"])
 y = data["price"]
 #Assim temos o preço em função das outras variáveis
 
-# Note: scaling is done inside cross-validation to avoid data leakage
 
 #Linear Regression
 lr_model = LinearRegression()
