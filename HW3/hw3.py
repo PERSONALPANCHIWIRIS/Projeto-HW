@@ -135,4 +135,4 @@ def loss_curve():
     plt.savefig('loss.png', dpi=300, bbox_inches='tight')
     return None
 
-loss_curve()
+#loss_curve()
