@@ -1,0 +1,3 @@
+The histogram above shows the distribution of both classes throughout the PC1. Because we observe sevral overlap for all of the 
+PC1 distribution, we can conclude that PC1 is not separating and classifying properly the classes (this because PCA is not a supervised
+method)

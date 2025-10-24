@@ -1,0 +1,4 @@
+LDA. PCA reduces dimensionality while preserving variance. Useful for compression and visualization, 
+but it does not optimize separation between classes. LDA is designed to discriminate classes
+(supervised) and is often more suitable. Based on the histograms of PC1 vs LDA, LDA offers better class
+separation and less overlap. Therefore, for building a discriminator, LDA is the most appropriate choice.

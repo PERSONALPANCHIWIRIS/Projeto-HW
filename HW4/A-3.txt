@@ -1,0 +1,8 @@
+The three more discriminitive clusters were 1, 2 and 5. For both 2 and 5, because their purity
+is relatively low we can not safely conclude that the values represented in their centroids
+(Pregnancy, glucose, Blodd pressure, etc) are safe indicators for their respective majority class
+(0 and 1, respectively). Only thing we can conclude is that there is a majority of a single class 
+in each one. 
+For cluster 1, however, with a purity of 0.9071, we can use as a classifier the values represented
+in its centroid as typical characteristics of a patient without diabetes, which means that most 
+patients in this cluster are safe from diabetes.

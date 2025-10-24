@@ -1,0 +1,2 @@
+In this case, there is considerably less overlap (specially in ranges were the frequency of a class is superior to that
+of the other). This shows a better classifying process by LDA in comparisson to PCA

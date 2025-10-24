@@ -1,0 +1,2 @@
+As it can be analyzed on the graph, for a 0.8 cummulative explained variance, we need at least 5 
+principal components.

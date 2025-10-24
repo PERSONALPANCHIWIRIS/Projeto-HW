@@ -1,0 +1,8 @@
+This method uses unsupervised clusters in classifiers. Each cluster is assigned its majority class.
+This method depends for its effectiveness on the fact of matching clusters and true classes. 
+There may, however, be cases where a majority class is assigned to a cluster by a marginal 
+difference between the two original classes present, which leads to a limited classification. The resulting 
+accuracy (0.7018) is not so bad, yet the accuracy value would be higher case a supervised 
+clustering model were used. For data that has no clear separations and natural groupings 
+(as in medical datasets) K-means is not a valid classifier. It would be better to opt for a decision tree 
+classifier
